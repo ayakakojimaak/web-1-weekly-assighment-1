@@ -1,3 +1,47 @@
-$main-yellow: yellow;
-$main-cyan: cyan;
-$main-black: black;
+// Typography
+$font-family: "Inter", sans-serif;
+$font-size-overview-heading: 14px;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// Primary Colors
+$lime-green: hsl(163, 72%, 41%);
+$bright-red: hsl(356, 69%, 56%);
+
+$facebook-color: hsl(208, 92%, 53%);
+$twitter-color: hsl(203, 89%, 53%);
+$instagram-gradient: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$youtube-color: hsl(348, 97%, 39%);
+
+// Dark Theme Variables
+$theme-dark: (
+  toggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%)),
+  bg: hsl(230, 17%, 14%),
+  top-bg: hsl(232, 19%, 15%),
+  card-bg: hsl(228, 28%, 20%),
+  text-desaturated: hsl(228, 34%, 66%),
+  text-main: hsl(0, 0%, 100%),
+);
+
+// Light Theme Variables
+$theme-light: (
+  toggle: hsl(230, 22%, 74%),
+  bg: hsl(0, 0%, 100%),
+  top-bg: hsl(225, 100%, 98%),
+  card-bg: hsl(227, 47%, 96%),
+  text-desaturated: hsl(228, 12%, 44%),
+  text-main: hsl(230, 17%, 14%),
+);
+
+// Apply the variables based on the theme
+:root[data-theme="theme-dark"] {
+  @each $key, $value in $theme-dark {
+    --#{$key}: #{$value};
+  }
+}
+
+:root[data-theme="theme-light"] {
+  @each $key, $value in $theme-light {
+    --#{$key}: #{$value};
+  }
+}

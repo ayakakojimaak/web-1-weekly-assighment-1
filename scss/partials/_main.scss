@@ -1,109 +1,109 @@
-header {
-  background-color: $main-yellow;
+body {
+  font-family: $font-family;
+  background-color: var(--top-bg);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
 
-  .logo {
-    font-size: 2rem;
-    font-weight: bold;
-    color: $main-black;
+// Dashboard Container
+.dashboard {
+  width: 100%;
+  max-width: 1000px;
+}
+
+// Header
+.dashboard-header {
+  span,
+  label {
+    color: var(--text-desaturated);
   }
-
-  nav {
-    ul {
-      display: flex;
-      list-style: none;
-      gap: 15px;
-      margin-top: 10px;
+  .form-check-input {
+    border: none;
+    box-shadow: none;
+    background-color: hsl(210, 78%, 56%);
+    &:checked {
+      background-color: var(--toggle);
     }
   }
 }
 
-main {
-  text-align: center;
-
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-
-  section {
-    margin-bottom: 40px;
-
-    h2 {
-      margin-bottom: 10px;
-      font-size: 2rem;
-      background-color: $main-cyan;
-      color: $main-black;
-      padding: 10px;
-      position: sticky;
-      top: 0;
+// Stats Section
+.stats {
+  &__card {
+    background-color: var(--card-bg);
+    border-top: 0.26rem solid;
+    &-facebook {
+      border-color: $facebook-color;
     }
+    &-twitter {
+      border-color: $twitter-color;
+    }
+    &-instagram {
+      border-image: $instagram-gradient;
+    }
+    &-youtube {
+      border-color: $youtube-color;
+    }
+  }
+  h2 {
+    font-size: 2.6rem;
+  }
+  span {
+    color: var(--text-desaturated);
+  }
+  &__username {
+    font-size: 0.8rem;
+    color: var(--text-desaturated);
+  }
+}
+
+// Overview Section
+.overview-section {
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  &__card {
+    background-color: var(--card-bg);
 
     p {
-      margin-bottom: 20px;
-      font-size: 1rem;
-      text-align: left;
+      font-size: 0.9rem;
+      color: var(--text-desaturated);
+      margin-bottom: 5px;
     }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 10px;
-      margin-top: 20px;
-
-      img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-
-        &:hover {
-          transform: scale(1.05);
-        }
-      }
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
     }
-    &.fruit-hover {
-      figure {
-        position: relative;
-        overflow: hidden;
-        width: 30%;
-        img {
-          width: 100%;
-        }
-      }
-      figcaption {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        opacity: 0;
-        background-color: red;
-        color: white;
-      }
-      figure:hover figcaption {
-        opacity: 1;
-      }
-    }
-  }
 
-  .back-to-top-btn {
-    position: fixed;
-    bottom: 0;
-    right: 0;
+    .change {
+      font-size: 0.8rem;
 
-    a {
-      padding: 10px 20px;
-      background: $main-black;
-      color: white;
+      &.positive {
+        color: $lime-green;
+      }
+
+      &.negative {
+        color: $bright-red;
+      }
     }
   }
 }
 
-footer {
-  text-align: start;
-}
+// // Responsive Styles
+// @media (max-width: 768px) {
+//   .stat-box,
+//   .overview-box {
+//     width: calc(50% - 10px);
+//   }
+// }
 
-@media (max-width: 375px) {
-  .gallery {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  }
-}
+// @media (max-width: 480px) {
+//   .stat-box,
+//   .overview-box {
+//     width: 100%;
+//   }
+// }

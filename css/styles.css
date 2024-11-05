@@ -1,0 +1,105 @@
+:root[data-theme=theme-dark] {
+  --toggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --bg: hsl(230, 17%, 14%);
+  --top-bg: hsl(232, 19%, 15%);
+  --card-bg: hsl(228, 28%, 20%);
+  --text-desaturated: hsl(228, 34%, 66%);
+  --text-main: hsl(0, 0%, 100%);
+}
+
+:root[data-theme=theme-light] {
+  --toggle: hsl(230, 22%, 74%);
+  --bg: hsl(0, 0%, 100%);
+  --top-bg: hsl(225, 100%, 98%);
+  --card-bg: hsl(227, 47%, 96%);
+  --text-desaturated: hsl(228, 12%, 44%);
+  --text-main: hsl(230, 17%, 14%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--top-bg);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.dashboard {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.dashboard-header span,
+.dashboard-header label {
+  color: var(--text-desaturated);
+}
+.dashboard-header .form-check-input {
+  border: none;
+  box-shadow: none;
+  background-color: hsl(210, 78%, 56%);
+}
+.dashboard-header .form-check-input:checked {
+  background-color: var(--toggle);
+}
+
+.stats__card {
+  background-color: var(--card-bg);
+  border-top: 0.26rem solid;
+}
+.stats__card-facebook {
+  border-color: hsl(208, 92%, 53%);
+}
+.stats__card-twitter {
+  border-color: hsl(203, 89%, 53%);
+}
+.stats__card-instagram {
+  border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+.stats__card-youtube {
+  border-color: hsl(348, 97%, 39%);
+}
+.stats h2 {
+  font-size: 2.6rem;
+}
+.stats span {
+  color: var(--text-desaturated);
+}
+.stats__username {
+  font-size: 0.8rem;
+  color: var(--text-desaturated);
+}
+
+.overview-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.overview-section__card {
+  background-color: var(--card-bg);
+}
+.overview-section__card p {
+  font-size: 0.9rem;
+  color: var(--text-desaturated);
+  margin-bottom: 5px;
+}
+.overview-section__card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+.overview-section__card .change {
+  font-size: 0.8rem;
+}
+.overview-section__card .change.positive {
+  color: hsl(163, 72%, 41%);
+}
+.overview-section__card .change.negative {
+  color: hsl(356, 69%, 56%);
+}
+
+/*# sourceMappingURL=styles.css.map */
