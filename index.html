@@ -16,12 +16,12 @@
   <body>
     <div class="container py-4">
       <!-- Header -->
-      <header class="dashboard-header d-flex justify-content-between align-items-center mb-5">
-        <div>
+      <header class="dashboard-header d-md-flex justify-content-between align-items-center pb-3 mb-5">
+        <div class="dashboard-header__title">
           <h1 class="mb-2 fw-bold">Social Media Dashboard</h1>
           <span class="fw-bold">Total Followers: 23,004</span>
         </div>
-        <div class="form-check form-switch d-flex align-items-center">
+        <div class="dashboard-header__check form-check form-switch p-0 d-flex align-items-center">
           <label class="form-check-label fw-bold me-2" for="darkModeToggle">Dark Mode</label>
           <input class="form-check-input form-check form-switch m-0" type="checkbox" id="darkModeToggle" />
         </div>
@@ -29,117 +29,149 @@
 
       <div class="stats row text-center mb-4">
         <div class="col-md-3 mb-3">
-          <div class="stats__card stats__card-facebook py-5 px-3 rounded shadow-sm">
+          <div class="stats__card stats__card-facebook p-4 rounded shadow-sm">
             <div class="stats__username pb-3">
               <img src="images/icon-facebook.svg" alt="facebook" />
               <span class="ms-1">@nathanf</span>
             </div>
             <h2>1987</h2>
             <span>FOLLOWERS</span>
-            <div class="text-success"><img src="images/icon-up.svg" class="me-1" alt="plus" />12 Today</div>
+            <div class="text-success pt-3"><img src="images/icon-up.svg" class="me-1" alt="plus" />12 Today</div>
           </div>
         </div>
         <div class="col-md-3 mb-3">
-          <div class="stats__card stats__card-twitter py-5 px-3 rounded shadow-sm">
+          <div class="stats__card stats__card-twitter p-4 rounded shadow-sm">
             <div class="stats__username pb-3">
               <img src="images/icon-twitter.svg" alt="twitter" />
               <span class="ms-1">@nathanf</span>
             </div>
             <h2>1044</h2>
             <span>FOLLOWERS</span>
-            <div class="text-success"><img src="images/icon-up.svg" class="me-1" alt="plus" />99 Today</div>
+            <div class="text-success pt-3"><img src="images/icon-up.svg" class="me-1" alt="plus" />99 Today</div>
           </div>
         </div>
         <div class="col-md-3 mb-3">
-          <div class="stats__card stats__card-instagram py-5 px-3 rounded shadow-sm">
+          <div class="stats__card stats__card-instagram p-4 rounded shadow-sm">
             <div class="stats__username pb-3">
               <img src="images/icon-instagram.svg" alt="instagram" />
               <span class="ms-1">@realnathanf</span>
             </div>
             <h2>11k</h2>
             <span>FOLLOWERS</span>
-            <div class="text-success"><img src="images/icon-up.svg" class="me-1" alt="plus" />1099 Today</div>
+            <div class="text-success pt-3"><img src="images/icon-up.svg" class="me-1" alt="plus" />1099 Today</div>
           </div>
         </div>
         <div class="col-md-3 mb-3">
-          <div class="stats__card stats__card-youtube py-5 px-3 rounded shadow-sm">
+          <div class="stats__card stats__card-youtube p-4 rounded shadow-sm">
             <div class="stats__username pb-3">
               <img src="images/icon-youtube.svg" alt="youtube" />
               <span class="ms-1">Nathan F.</span>
             </div>
             <h2>8239</h2>
             <span>SUBSCRIBERS</span>
-            <div class="text-danger"><img src="images/icon-down.svg" class="me-1" alt="minus" />144 Today</div>
+            <div class="text-danger pt-3"><img src="images/icon-down.svg" class="me-1" alt="minus" />144 Today</div>
           </div>
         </div>
       </div>
 
-      <div class="overview-section text-center mb-3">
+      <div class="overview mb-3">
         <h2>Overview - Today</h2>
       </div>
       <div class="row text-center">
         <div class="col-md-3 mb-3">
-          <div class="overview-section__card p-3 rounded p-3 rounded shadow-sm">
-            <span>Page Views</span>
-            <img src="images/icon-facebook.svg" alt="facebook" />
-            <h3>87</h3>
-            <span class="text-success"><img src="images/icon-up.svg" class="me-1" alt="plus" />3%</span>
+          <div class="overview__card p-4 rounded rounded shadow-sm">
+            <div class="d-flex justify-content-between align-items-center pb-3">
+              <span>Page Views</span>
+              <img src="images/icon-facebook.svg" alt="facebook" />
+            </div>
+            <div class="d-flex justify-content-between align-items-end">
+              <h3 class="mb-0">87</h3>
+              <span class="text-success"><img src="images/icon-up.svg" class="me-1" alt="plus" />3%</span>
+            </div>
           </div>
         </div>
         <div class="col-md-3 mb-3">
-          <div class="overview-section__card p-3 rounded p-3 rounded shadow-sm">
-            <span>Likes</span>
-            <img src="images/icon-facebook.svg" alt="facebook" />
-            <h3>52</h3>
-            <span class="text-danger"><img src="images/icon-down.svg" class="me-1" alt="minus" />2%</span>
+          <div class="overview__card p-4 rounded rounded shadow-sm">
+            <div class="d-flex justify-content-between align-items-center pb-3">
+              <span>Likes</span>
+              <img src="images/icon-facebook.svg" alt="facebook" />
+            </div>
+            <div class="d-flex justify-content-between align-items-end">
+              <h3 class="mb-0">52</h3>
+              <span class="text-danger"><img src="images/icon-down.svg" class="me-1" alt="minus" />2%</span>
+            </div>
           </div>
         </div>
         <div class="col-md-3 mb-3">
-          <div class="overview-section__card p-3 rounded p-3 rounded shadow-sm">
-            <span>Retweets</span>
-            <img src="images/icon-instagram.svg" alt="instagram" />
-            <h3>117</h3>
-            <span class="text-success"><img src="images/icon-up.svg" class="me-1" alt="plus" />303%</span>
+          <div class="overview__card p-4 rounded rounded shadow-sm">
+            <div class="d-flex justify-content-between align-items-center pb-3">
+              <span>Retweets</span>
+              <img src="images/icon-instagram.svg" alt="instagram" />
+            </div>
+            <div class="d-flex justify-content-between align-items-end">
+              <h3 class="mb-0">117</h3>
+              <span class="text-success"><img src="images/icon-up.svg" class="me-1" alt="plus" />303%</span>
+            </div>
           </div>
         </div>
         <div class="col-md-3 mb-3">
-          <div class="overview-section__card p-3 rounded p-3 rounded shadow-sm">
-            <span>Likes</span>
-            <img src="images/icon-instagram.svg" alt="instagram" />
-            <h3>507</h3>
-            <span class="text-success"><img src="images/icon-up.svg" class="me-1" alt="plus" />553%</span>
+          <div class="overview__card p-4 rounded rounded shadow-sm">
+            <div class="d-flex justify-content-between align-items-center pb-3">
+              <span>Likes</span>
+              <img src="images/icon-instagram.svg" alt="instagram" />
+            </div>
+            <div class="d-flex justify-content-between align-items-end">
+              <h3 class="mb-0">507</h3>
+              <span class="text-success"><img src="images/icon-up.svg" class="me-1" alt="plus" />553%</span>
+            </div>
           </div>
         </div>
         <div class="col-md-3 mb-3">
-          <div class="overview-section__card p-3 rounded p-3 rounded shadow-sm">
-            <span>Likes</span>
-            <img src="images/icon-twitter.svg" alt="twitter" />
-            <h3>5462</h3>
-            <span class="text-success"><img src="images/icon-up.svg" class="me-1" alt="plus" />2257%</span>
+          <div class="overview__card p-4 rounded rounded shadow-sm">
+            <div class="d-flex justify-content-between align-items-center pb-3">
+              <span>Likes</span>
+              <img src="images/icon-twitter.svg" alt="twitter" />
+            </div>
+            <div class="d-flex justify-content-between align-items-end">
+              <h3 class="mb-0">5462</h3>
+              <span class="text-success"><img src="images/icon-up.svg" class="me-1" alt="plus" />2257%</span>
+            </div>
           </div>
         </div>
         <div class="col-md-3 mb-3">
-          <div class="overview-section__card p-3 rounded p-3 rounded shadow-sm">
-            <span>Profile Views</span>
-            <img src="images/icon-twitter.svg" alt="twitter" />
-            <h3>52k</h3>
-            <span class="text-success"><img src="images/icon-up.svg" class="me-1" alt="plus" />1375%</span>
+          <div class="overview__card p-4 rounded rounded shadow-sm">
+            <div class="d-flex justify-content-between align-items-center pb-3">
+              <span>Profile Views</span>
+              <img src="images/icon-twitter.svg" alt="twitter" />
+            </div>
+            <div class="d-flex justify-content-between align-items-end">
+              <h3 class="mb-0">52k</h3>
+              <span class="text-success"><img src="images/icon-up.svg" class="me-1" alt="plus" />1375%</span>
+            </div>
           </div>
         </div>
         <div class="col-md-3 mb-3">
-          <div class="overview-section__card p-3 rounded p-3 rounded shadow-sm">
-            <span>Likes</span>
-            <img src="images/icon-youtube.svg" alt="youtube" />
-            <h3>107</h3>
-            <span class="text-danger"><img src="images/icon-down.svg" class="me-1" alt="minus" />19%</span>
+          <div class="overview__card p-4 rounded rounded shadow-sm">
+            <div class="d-flex justify-content-between align-items-center pb-3">
+              <span>Likes</span>
+              <img src="images/icon-youtube.svg" alt="youtube" />
+            </div>
+            <div class="d-flex justify-content-between align-items-end">
+              <h3 class="mb-0">107</h3>
+              <span class="text-danger"><img src="images/icon-down.svg" class="me-1" alt="minus" />19%</span>
+            </div>
           </div>
         </div>
         <div class="col-md-3 mb-3">
-          <div class="overview-section__card p-3 rounded p-3 rounded shadow-sm">
-            <span>Total Views</span>
-            <img src="images/icon-youtube.svg" alt="youtube" />
-            <h3>1407</h3>
-            <span class="text-danger"><img src="images/icon-down.svg" class="me-1" alt="minus" />12%</span>
+          <div class="overview__card p-4 rounded rounded shadow-sm">
+            <div class="d-flex justify-content-between align-items-center pb-3">
+              <span>Total Views</span>
+              <img src="images/icon-youtube.svg" alt="youtube" />
+            </div>
+            <div class="d-flex justify-content-between align-items-end">
+              <h3 class="mb-0">1407</h3>
+              <span class="text-danger"><img src="images/icon-down.svg" class="me-1" alt="minus" />12%</span>
+            </div>
           </div>
         </div>
       </div>
